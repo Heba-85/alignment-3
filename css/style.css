@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+* {
+    box-sizing: border-box;
+}
+
+/* body { 
+    background-color: #fff; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    line-height: 1.4; 
+    margin: 0; 
+    font-size: 0.6rem;
+    }  */
+    
+body {
+    font-family: 'Work Sans', sans-serif ;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+h2, h3 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+/* Place all content within header in a wrapper that has a max-width 
+of 940px and center in the middle of the page. This will be a task 
+that is repeated for each section so creating a wrapper class would 
+be ideal. */
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+/* Header */
+/* Update background color to #000. */
+/* Change font color to #fff. */
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* Adjust name to be on the left and the main navigation to display 
+on the right using flexbox. */
+/* Align the name and navigation. */
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Change the navigation items to line up beside one another. */
+/* Add space in between each navigation link. */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero section */
+/* Set the height of the section to 600px. */
+/* Add a background image to the section and adjust properties so that it covers 
+the entire area and the focal point is in the center of the image. */
+/* Apply a grayscale filter of 70%. This is something you will have to search online. 
+A good resource would be w3schools.com. */
+/* Use flexbox properties to center the text both horizontally and vertically 
+in the middle of the hero section. */
+
+#hero {
+    height: 600px;
+
+    background-image: url(../images/hands-typing.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 1rem; */
+}
+
+
+/* Set your h1 text to have a max-width of 60%. */
+/* Add a black background color to your h1 text using rgba so that the opacity of 
+the color is set to 50%. */
+/* Apply a text shadow to the white h1 text to separate it from
+the background a bit more.  */
+#hero h1 {
+    max-width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    padding: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+/* About Me section */
+/* Place all content within this section in a wrapper that has a max-width 
+of 940px and center in the middle of the page. */
+/* Using flexbox or grid, create a two column layout.  */
+
+#about-me .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    align-items: center;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 3em 2em;
+}
+
+/* Text for the section should be in the center (with space on top and bottom) 
+but the image should align with the bottom of the section.  */
+#about-me img {
+    align-self: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services section */
+/* Place all content within this section in a wrapper that has a max-width 
+of 940px and center in the middle of the page. */
+#services .wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+#services {
+/* Set the section background color to #fafafa. */
+    background-color: #fafafa;
+}
+
+/* Set a max width on the heading and align the text in the center.  */
+#services h2 {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 0.5em auto;
+}
+
+/* Use grid to create a three column grid where all columns are evenly distributed. */
+/* Add a gap in between each column. */
+#services .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Apply flexbox to the article and change the direction to be column. 
+By applying flexbox you now have additional properties available to you. */
+.grid article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 1em;
+}
+
+.grid article h3 {
+    margin: 0;
+}
+
+/* Using margin auto, display the button for each article at the bottom. */
+.grid article a {
+    margin-top: auto;
+}
+
+/* Style the buttons similar to what is provided in the screenshot; padding, 
+background color of black, black border and text white. On hover swap those 
+property values where the background is white and text is black but the border 
+remains black. */
+.grid a:link,
+.grid a:visited {
+    display: inline-block;
+    padding: 1em 1em;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+.grid a:hover,
+.grid a:focus {
+    background-color: #fff;
+    color:#000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* My Work section */
+/* Place all content within this section in a wrapper that has 
+a max-width of 940px and center in the middle of the page. */
+#work .wrapper{
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+/* Set a max width on the heading and introduction text for the section 
+and align the text in the center. */
+#work h2, 
+#work p {
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Place all images in that section in a grid using grid areas. */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas:
+    "img1 img1 img1 img2 img2 img2"
+    "img3 img3 img4 img4 img5 img5";
+}
+
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.img5 {
+    grid-area: img5;
+}
+
+.image-grid img {
+    width: 100%;
+    display: block;
+}
+
+
+
+
+
+
+
+
+/* Footer */
+/* Apply a black background and change text to display as white. */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1em 0;
+
+/* Align text in the middle. */
+    text-align: center;
+}
